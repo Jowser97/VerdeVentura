@@ -1,0 +1,8 @@
+.custom-navbar {
+    margin: 10px 20px; /* Separación de los bordes */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efecto flotante */
+    background-color: white; /* Fondo blanco */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borde para visibilidad */
+    z-index: 1030; /* Asegura que la navbar esté por encima de otros elementos */
+  }
