@@ -6,10 +6,9 @@ import { RetosComponent } from './pages/retos/retos.component';
 import { UserprofileComponent } from './pages/userprofile/userprofile.component';
 
 export const routes: Routes = [
-{path: '', component: Err404Component},
-{path: 'retos', component: RetosComponent},
-{path: 'login', component: LoginComponent},
-{path: 'perfil', component: UserprofileComponent},
-{path: '**', component: Err404Component},
-
+  { path: '', component: Err404Component },
+  { path: 'retos', component: RetosComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'perfil', component: UserprofileComponent },
+  { path: '**', component: Err404Component },
 ];
