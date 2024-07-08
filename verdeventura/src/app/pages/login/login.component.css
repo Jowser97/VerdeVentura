@@ -1,10 +1,4 @@
-/* Estilos para el contenedor */
-.custom-container {
-    background-image: url("/assets/background.png"); /* Ruta de la imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-  }
+
   
   /* Estilos para la tarjeta */
   .custom-card {
