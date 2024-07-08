@@ -1,13 +1,58 @@
-<div class="container mt-5">
-    <h2>Perfil de Usuario</h2>
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">John Doe</h5>
-        <p class="card-text">Email: johndoe&#64;example.com</p>
-        <p class="card-text">Puntos Totales: 1200</p>
-        <p class="card-text">Grupo: Eco Warriors</p>
-        <a href="#" class="btn btn-primary">Editar Perfil</a>
-        <a href="#" class="btn btn-secondary">Cambiar Contraseña</a>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Menú Lateral -->
+    <div class="col-md-3 sidebar-container">
+      <div class="sidebar bg-light shadow-sm p-3">
+        <div class="text-center mb-4">
+          <img src="https://via.placeholder.com/100" alt="User Avatar" class="img-fluid rounded-circle mb-2">
+          <h5>NOMBRE USUARIO</h5>
+          <span class="edit-icon">&#9998;</span>
+        </div>
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <a href="#" class="text-dark"><i class="bi bi-plus-circle"></i> MIS RETOS</a>
+          </li>
+          <li class="mb-3">
+            <a href="#" class="text-dark"><i class="bi bi-folder"></i> ARCHIVOS</a>
+          </li>
+        </ul>
+        <div class="mt-auto">
+          <a href="#" class="text-dark"><i class="bi bi-info-circle"></i> Ayuda</a>
+        </div>
+      </div>
+    </div>
+    <!-- Contenido Principal -->
+    <div class="col-md-8 main-content">
+      <div class="profile-header bg-light shadow-sm p-4 mb-4">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h5>INFORMACIÓN DE USUARIO</h5>
+            <ul class="list-unstyled">
+              <li>País</li>
+              <li>Ciudad</li>
+              <li>e-mail</li>
+              <li>Nombre de usuario</li>
+              <li>Fecha de creación</li>
+              <li>Fecha de nacimiento</li>
+            </ul>
+          </div>
+          <button class="btn btn-light edit-icon">&#9998;</button>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div>
+            <h5>LOGIN ACTIVITY</h5>
+            <p>Lunes, 17 Enero, 2024, 12pm ( hace 15 días)</p>
+            <h5>RETOS</h5>
+            <ul class="list-unstyled">
+              <li>Número de retos cumplidos:</li>
+              <li>Puntos totales:</li>
+              <li>Grupo al que perteneces:</li>
+            </ul>
+          </div>
+          
+          </div>
+        </div>
       </div>
     </div>
   </div>
+

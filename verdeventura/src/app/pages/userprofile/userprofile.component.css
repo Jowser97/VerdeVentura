@@ -1,0 +1,93 @@
+.sidebar-container {
+  padding-left: 20px; /* Ajusta este valor según el padding lateral de la barra superior */
+  padding-right: 15px;
+}
+
+.sidebar {
+  background-color: #e0f7fa; /* Color de fondo similar a la imagen proporcionada */
+  color: black;
+  height: calc(
+    100vh - 150px
+  ); /* Ajusta este valor según la altura de tu barra superior */
+  padding: 20px;
+  position: fixed;
+  top: 100px; /* Ajusta este valor según la altura de tu barra superior */
+  width: 100%;
+  max-width: 250px; /* Ajusta el ancho del sidebar */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.sidebar img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.sidebar h5 {
+  margin-top: 10px;
+}
+
+.sidebar a {
+  color: black;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.profile-header {
+  background-color: #f5f5f5; /* Color de fondo similar a la imagen proporcionada */
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header h5 {
+  margin-bottom: 15px;
+}
+
+.profile-header ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.profile-header .edit-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.profile-content {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  padding-left: 20px; /* Ajusta este valor según el padding lateral de la barra superior */
+  padding-right: 15px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
