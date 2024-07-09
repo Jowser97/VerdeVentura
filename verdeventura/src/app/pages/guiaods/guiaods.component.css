@@ -1,0 +1,23 @@
+.container-fluid {
+  height: 100%;
+  padding-top: 20px;
+}
+
+.bg-white {
+  background-color: white !important;
+}
+
+.p-3 {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
