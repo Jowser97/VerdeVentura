@@ -3,16 +3,20 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
-  }
-  
-  .container-fluid {
-    height: 50vh; /* Ajusta la altura según sea necesario */
+}
 
+.container-fluid {
+    width: 100%;
+    padding: 0;
+}
+
+.home-header {
+    height: 50vh; /* Ajusta la altura según sea necesario */
     background-size: cover;
     position: relative;
-  }
-  
-  .overlay {
+}
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -21,15 +25,16 @@ body, html {
     background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen de fondo para resaltar los botones */
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
-  
-  .buttons {
+    align-items: flex-end; /* Mueve los botones a la parte inferior */
+    padding-bottom: 20px; /* Añade padding inferior para los botones */
+}
+
+.buttons {
     display: flex;
     gap: 10px;
-  }
-  
-  .buttons button {
+}
+
+.buttons button {
     background-color: #4caf50;
     color: white;
     border: none;
@@ -42,18 +47,23 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .buttons button.selected {
+}
+
+.buttons button.selected {
     border: 2px solid black;
-  }
-  
-  .buttons button:hover {
+}
+
+.buttons button:hover {
     background-color: #45a049;
-  }
-  
-  .content {
+}
+
+.content-container {
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+}
+
+.content {
     padding: 20px;
     text-align: center;
-  }
-  
+}
