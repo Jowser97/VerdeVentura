@@ -1,32 +1,40 @@
 .custom-card {
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-  }
-  
-  h5 {
-    color: #4caf50; /* Color del texto */
-    font-weight: bold;
-  }
-  
-  p, label {
-    color: #333; /* Color del texto */
-  }
-  
-  .form-control {
-    border: 1px solid #4caf50; /* Borde del input */
-    border-radius: 5px; /* Bordes redondeados */
-  }
-  
-  .custom-btn {
-    background-color: #4caf50; /* Color de fondo del botón */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Ajustar el tamaño del botón */
-    font-size: 16px; /* Ajustar el tamaño del texto */
-    width: auto; /* Asegura que el botón se ajuste a su contenido */
-  }
-  
-  .custom-btn:hover {
-    background-color: #45a049; /* Color de fondo del botón al pasar el ratón por encima */
-  }
-  
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  padding: 20px; /* Añade padding para un espacio interior */
+}
+
+h5 {
+  color: #4caf50; /* Color del texto */
+  font-weight: bold;
+}
+
+p, label {
+  color: #333; /* Color del texto */
+}
+
+.form-control {
+  border: 1px solid #4caf50; /* Borde del input */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.custom-btn {
+  background-color: #4caf50; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Ajustar el tamaño del botón */
+  font-size: 16px; /* Ajustar el tamaño del texto */
+  width: auto; /* Asegura que el botón se ajuste a su contenido */
+}
+
+.custom-btn:hover {
+  background-color: #45a049; /* Color de fondo del botón al pasar el ratón por encima */
+}
+
+.no-margin {
+  margin: 0; /* Elimina el margen */
+}
+
+.container-fluid.no-padding {
+  padding: 0; /* Elimina el padding */
+}

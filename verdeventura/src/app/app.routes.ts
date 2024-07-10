@@ -10,6 +10,7 @@ import { GuiaodsComponent } from './pages/guiaods/guiaods.component';
 import { GroupComponent } from './pages/group/group.component';
 import { CrearComponent } from './pages/group/crear/crear.component';
 import { BuscarComponent } from './pages/group/buscar/buscar.component';
+import { MigrupoComponent } from './pages/group/migrupo/migrupo.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'group', component: GroupComponent },
   { path: 'creargrupo', component: CrearComponent },
   { path: 'buscargrupo', component: BuscarComponent },
+  { path: 'migrupo', component: MigrupoComponent },
   { path: 'login', component: LoginComponent },
   { path: 'perfil', component: UserprofileComponent },
   { path: 'rank', component: RankingComponent },

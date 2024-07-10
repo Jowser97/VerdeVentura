@@ -1,93 +1,216 @@
-.sidebar-container {
-  padding-left: 20px; /* Ajusta este valor según el padding lateral de la barra superior */
-  padding-right: 15px;
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.sidebar {
-  background-color: #e0f7fa; /* Color de fondo similar a la imagen proporcionada */
-  color: black;
-  height: calc(
-    100vh - 150px
-  ); /* Ajusta este valor según la altura de tu barra superior */
-  padding: 20px;
-  position: fixed;
-  top: 100px; /* Ajusta este valor según la altura de tu barra superior */
+.container-fluid {
   width: 100%;
-  max-width: 250px; /* Ajusta el ancho del sidebar */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
+  padding: 0;
 }
 
-.sidebar img {
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.sidebar h5 {
-  margin-top: 10px;
-}
-
-.sidebar a {
-  color: black;
-  text-decoration: none;
-}
-
-.sidebar a:hover {
-  text-decoration: underline;
-}
-
-.profile-header {
-  background-color: #f5f5f5; /* Color de fondo similar a la imagen proporcionada */
-  color: black;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+.home-header {
+  height: 50vh; /* Ajusta la altura según sea necesario */
+  background-size: cover;
   position: relative;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile-header h5 {
-  margin-bottom: 15px;
-}
-
-.profile-header ul {
-  padding-left: 0;
-  list-style: none;
-}
-
-.profile-header .edit-icon {
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.profile-content {
-  background-color: #f5f5f5;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.main-content {
-  padding-left: 20px; /* Ajusta este valor según el padding lateral de la barra superior */
-  padding-right: 15px;
-}
-
-.d-flex {
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen de fondo para resaltar los botones */
   display: flex;
-}
-
-.justify-content-between {
-  justify-content: space-between;
-}
-
-.align-items-start {
-  align-items: flex-start;
-}
-
-.align-items-center {
+  justify-content: center;
   align-items: center;
 }
 
-.m-2 {
-  margin: 0.5rem;
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-items: end;
+}
+
+.buttons button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons button.selected {
+  border: 2px solid black;
+}
+
+.buttons button:hover {
+  background-color: #45a049;
+}
+
+.custom-card {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  padding: 20px; /* Añade padding para un espacio interior */
+  margin: 10px; /* Márgenes entre tarjetas */
+}
+
+h5, h3 {
+  color: #4caf50; /* Color del texto */
+  font-weight: bold;
+}
+
+p, label {
+  color: #333; /* Color del texto */
+}
+
+.form-control {
+  border: 1px solid #4caf50; /* Borde del input */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-bottom: 10px; /* Espacio inferior entre campos */
+}
+
+.custom-btn {
+  background-color: #4caf50; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Ajustar el tamaño del botón */
+  font-size: 16px; /* Ajustar el tamaño del texto */
+  width: auto; /* Asegura que el botón se ajuste a su contenido */
+}
+
+.custom-btn:hover {
+  background-color: #45a049; /* Color de fondo del botón al pasar el ratón por encima */
+}
+
+.no-margin {
+  margin: 0; /* Elimina el margen */
+}
+
+.container-fluid.no-padding {
+  padding: 0; /* Elimina el padding */
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Indica que se puede hacer clic */
+}
+
+.table-header {
+  font-weight: bold;
+  background-color: #f5f5f5; /* Color de fondo del encabezado */
+  cursor: default; /* No indica que se puede hacer clic */
+}
+
+.table-row.selected {
+  background-color: #e0f7fa; /* Fondo al hacer clic */
+}
+
+.table-cell {
+  flex: 1;
+  text-align: center;
+}
+
+.table-cell:nth-child(1) {
+  text-align: left;
+}
+
+.table-cell:nth-child(3) {
+  text-align: right;
+}
+
+.progress-bar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.progress-bar {
+  background-color: #e0f7fa;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar span {
+  display: block;
+  height: 20px;
+  background-color: #4caf50;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  border-radius: 50%;
+  transition: opacity 0.3s;
+}
+
+.image-container:hover img {
+  opacity: 0.7;
+}
+
+.change-image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-container:hover .change-image-text {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.user-info {
+  text-align: center;
+}
+
+.list-unstyled {
+  padding-left: 0;
+}
+
+.list-unstyled li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.list-unstyled li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.list-unstyled li a:hover {
+  text-decoration: underline;
+}
+
+.list-unstyled li i {
+  margin-right: 5px;
 }
