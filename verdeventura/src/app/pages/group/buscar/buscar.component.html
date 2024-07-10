@@ -1,26 +1,40 @@
 <div class="container-fluid no-padding">
     <div class="row no-margin">
-      <!-- Ayuda -->
-      <div class="col-md-4 no-margin">
-        <div class="p-3 bg-light custom-card no-margin">
-          <h5>BUSCAR GRUPOS</h5>
-          <input type="text" class="form-control" placeholder="Escriba aquí...">
-          <div class="mt-3">
-            <strong>RECUERDA:</strong>
-            <p>Puedes buscar un grupo de dos formas:</p>
-            <ul>
-              <li>A través de su ID.</li>
-              <li>A través de su Nombre.</li>
-            </ul>
-            <p>Además también puedes acceder a un grupo directamente desde el link de unión, que previamente te habrá tenido que enviar un miembro del grupo.</p>
-            <p>Puedes encontrar 2 tipos de grupos:</p>
-            <ul>
-              <li>Grupos públicos, podrás acceder libremente.</li>
-              <li>Grupo privado: deberás saber la contraseña establecida para dicho grupo. Esta contraseña deberán facilitártela los miembros del grupo.</li>
-            </ul>
-          </div>
+          <!-- Ayuda -->
+    <div class="col-md-4 no-margin">
+      <div class="p-3 bg-light custom-card no-margin">
+        <h5>BUSCAR GRUPOS</h5>
+        <input type="text" class="form-control" placeholder="Escriba aquí...">
+        <div class="mt-3">
+          <label for="groupSize"><strong>Tamaño del grupo:</strong></label><br>
+          <input type="checkbox" id="size5" name="groupSize">
+          <label for="size5">5</label>
+          <input type="checkbox" id="size10" name="groupSize">
+          <label for="size10">10</label>
+        </div>
+        <div class="mt-3">
+          <label for="groupType"><strong>Tipo de grupo:</strong></label><br>
+          <input type="checkbox" id="public" name="groupType">
+          <label for="public">Público</label>
+          <input type="checkbox" id="private" name="groupType">
+          <label for="private">Privado</label>
+        </div>
+        <div class="mt-3">
+          <strong>RECUERDA:</strong>
+          <p>Puedes buscar un grupo de dos formas:</p>
+          <ul>
+            <li>A través de su ID.</li>
+            <li>A través de su Nombre.</li>
+          </ul>
+          <p>Además también puedes acceder a un grupo directamente desde el link de unión, que previamente te habrá tenido que enviar un miembro del grupo.</p>
+          <p>Puedes encontrar 2 tipos de grupos:</p>
+          <ul>
+            <li>Grupos públicos, podrás acceder libremente.</li>
+            <li>Grupo privado: deberás saber la contraseña establecida para dicho grupo. Esta contraseña deberán facilitártela los miembros del grupo.</li>
+          </ul>
         </div>
       </div>
+    </div>
       <!-- Lista de Grupos -->
       <div class="col-md-8 no-margin">
         <div class="p-3 bg-light custom-card no-margin">

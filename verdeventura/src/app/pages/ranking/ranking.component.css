@@ -1,0 +1,24 @@
+.custom-card {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  h5 {
+    color: #4caf50; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  .progress {
+    height: 20px;
+    border-radius: 10px;
+  }
+  
+  .progress-bar {
+    background-color: #4caf50;
+  }
+  
+  .container {
+    max-width: 1200px; /* Ajusta el ancho máximo del contenedor según sea necesario */
+  }
+  

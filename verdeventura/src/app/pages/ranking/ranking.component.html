@@ -1,30 +1,65 @@
 <div class="container mt-5">
-    <h2>Dashboard</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Total de Puntos</h5>
-            <p class="card-text">1200</p>
+  <div class="row">
+    <!-- Columna izquierda: Ranking según el grupo -->
+    <div class="col-md-6">
+      <div class="p-3 bg-light custom-card">
+        <h5 class="text-center">Ranking por Grupo</h5>
+        <div class="ranking-group">
+          <div class="d-flex justify-content-between">
+            <span>Grupo A</span>
+            <span>120 puntos</span>
           </div>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <span>Grupo B</span>
+            <span>110 puntos</span>
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <span>Grupo C</span>
+            <span>100 puntos</span>
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <!-- Añade más elementos según sea necesario -->
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Retos Completados</h5>
-            <p class="card-text">10</p>
+    </div>
+    
+    <!-- Columna derecha: Ranking según el código postal -->
+    <div class="col-md-6">
+      <div class="p-3 bg-light custom-card">
+        <h5 class="text-center">Ranking por Código Postal</h5>
+        <div class="ranking-postal-code">
+          <div class="d-flex justify-content-between">
+            <span>Código Postal 12345</span>
+            <span>130 puntos</span>
           </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Retos en Progreso</h5>
-            <p class="card-text">2</p>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
+          <div class="d-flex justify-content-between">
+            <span>Código Postal 67890</span>
+            <span>120 puntos</span>
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <span>Código Postal 11223</span>
+            <span>110 puntos</span>
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <!-- Añade más elementos según sea necesario -->
         </div>
       </div>
     </div>
   </div>
-  
+</div>
