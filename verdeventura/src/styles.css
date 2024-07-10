@@ -5,3 +5,9 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+/* Define a fixed height for the app-header, for example, 60px */
+app-header {
+  height: 60px;
+}
+

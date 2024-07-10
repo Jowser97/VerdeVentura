@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd, Event } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./shared/header/header.component";
 import { LoginComponent } from "./pages/login/login.component";
@@ -13,6 +14,15 @@ import { UserprofileComponent } from "./pages/userprofile/userprofile.component"
     styleUrl: './app.component.css',
     imports: [RouterOutlet, HeaderComponent, LoginComponent, RankingComponent, RetosComponent, UserprofileComponent]
 })
-export class AppComponent {
-  title = 'verdeventura';
+export class AppComponent implements OnInit {
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    });
+  }
 }
