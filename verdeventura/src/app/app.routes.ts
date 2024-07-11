@@ -11,9 +11,34 @@ import { GroupComponent } from './pages/group/group.component';
 import { CrearComponent } from './pages/group/crear/crear.component';
 import { BuscarComponent } from './pages/group/buscar/buscar.component';
 import { MigrupoComponent } from './pages/group/migrupo/migrupo.component';
+import { Slide1Component } from './pages/home/slide1/slide1.component';
+import { Slide2Component } from './pages/home/slide2/slide2.component';
+import { Slide3Component } from './pages/home/slide3/slide3.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  {
+    path: '',
+    component: HomeComponent,
+    children: [
+      {
+        path: "",
+        redirectTo: "slide1",
+        pathMatch: "full",
+      },
+      {
+        path: 'slide1',
+        component: Slide1Component,
+      },
+      {
+        path: 'slide2',
+        component: Slide2Component,
+      },
+      {
+        path: 'slide3',
+        component: Slide3Component,
+      },
+    ],
+  },
   { path: 'retos', component: RetosComponent },
   { path: 'group', component: GroupComponent },
   { path: 'creargrupo', component: CrearComponent },

@@ -1,31 +1,63 @@
-html, body {
-    height: 100%;
-    margin: 0;
-  }
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0;
+}
+
+.bg-light {
+  background-color: #eaf7f7;
+}
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+.rounded {
+  border-radius: 0.25rem !important;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+a img {
+  cursor: pointer;
+}
+
+a img:hover {
+  opacity: 0.8; /* Slightly dim the image on hover */
+}
+
+.seasonal-challenge {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.upload-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.upload-image button {
+  width: 100%;
+}
+
+.challenge-details h4 {
+  margin-top: 10px;
   
-  .container-fluid {
-    height: 100%;
-  }
-  
-  .row {
-    height: 100%;
-  }
-  
-  .col-md-3 {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .col-md-3 .p-3 {
-    flex: 1;
-  }
-  
-  .content-below-sidebar {
-    flex: 1;
-    overflow-y: auto;
-  }
-  
-  .col-md-9 {
-    overflow-y: auto;
-  }
-  
+}
+
+.challenge-details p {
+  margin-top: 10px;
+}
