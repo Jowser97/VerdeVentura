@@ -14,6 +14,8 @@ import { MigrupoComponent } from './pages/group/migrupo/migrupo.component';
 import { Slide1Component } from './pages/home/slide1/slide1.component';
 import { Slide2Component } from './pages/home/slide2/slide2.component';
 import { Slide3Component } from './pages/home/slide3/slide3.component';
+import { QuincenaComponent } from './pages/retos/quincena/quincena.component';
+import { SeasonalComponent } from './pages/retos/seasonal/seasonal.component';
 
 export const routes: Routes = [
   {
@@ -39,7 +41,25 @@ export const routes: Routes = [
       },
     ],
   },
-  { path: 'retos', component: RetosComponent },
+  { 
+    path: 'retos',
+    component: RetosComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'quincena',
+        pathMatch: 'full',
+      },
+      {
+        path: 'quincena',
+        component: QuincenaComponent 
+      },
+      {
+        path: 'seasonal',
+        component: SeasonalComponent
+      }
+    ]
+  },
   { path: 'group', component: GroupComponent },
   { path: 'creargrupo', component: CrearComponent },
   { path: 'buscargrupo', component: BuscarComponent },

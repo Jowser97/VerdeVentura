@@ -1,0 +1,23 @@
+.container-fluid {
+    padding: 0;
+  }
+  
+  .custom-view {
+    background-color: white; /* Fondo blanco */
+    padding: 20px; /* Espacio alrededor del contenido */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto de tarjeta */
+    text-align: center; /* Texto centrado */
+    margin: 20px auto; /* Centrar el contenedor horizontalmente y agregar margen */
+    max-width: 1100px; /* Ancho máximo del contenedor */
+  }
+  
+  .custom-view h2 {
+    color: #4caf50; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  .custom-view p {
+    color: #333; /* Color del texto */
+  }
+  

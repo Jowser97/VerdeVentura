@@ -11,3 +11,6 @@ app-header {
   height: 60px;
 }
 
+p, li {
+  text-align: justify;
+}

@@ -1,63 +1,58 @@
-/* app.component.css */
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
 .container-fluid {
-    width: 100%;
-    padding: 0;
+  width: 100%;
+  padding: 0;
 }
 
 .home-header {
-    height: 50vh; /* Ajusta la altura según sea necesario */
-    background-size: cover;
-    position: relative;
+  height: 25vh; /* Ajusta la altura según sea necesario */
+  background-size: cover;
+  position: relative;
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen de fondo para resaltar los botones */
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Mueve los botones a la parte inferior */
-    padding-bottom: 20px; /* Añade padding inferior para los botones */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Reduce la altura del contenedor */
+  background-image: url('/assets/fondohome.jpeg'); /* Ruta de la imagen */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+  background-position: center; /* Centra la imagen en el contenedor */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Mueve los botones a la parte inferior */
+  padding-bottom: 20px; /* Añade padding inferior para los botones */
 }
 
 .buttons {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .buttons button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .buttons button.selected {
-    border: 2px solid black;
+  border: 2px solid black;
 }
 
 .buttons button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 .content {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
