@@ -61,3 +61,7 @@ a img:hover {
 .challenge-details p {
   margin-top: 10px;
 }
+
+position-fixed-top{
+  position: fixed;
+}

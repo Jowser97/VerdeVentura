@@ -9,51 +9,33 @@ body, html {
   padding: 0;
 }
 
-.home-header {
-  height: 50vh; /* Ajusta la altura según sea necesario */
-  background-size: cover;
-  position: relative;
+.bg-light {
+  background-color: #eaf7f7;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen de fondo para resaltar los botones */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.p-3 {
+  padding: 1rem !important;
 }
 
-.buttons {
-  display: flex;
-  gap: 10px;
-  justify-items: end;
+.rounded {
+  border-radius: 0.25rem !important;
 }
 
-.buttons button {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+a img {
   cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.buttons button.selected {
-  border: 2px solid black;
-}
-
-.buttons button:hover {
-  background-color: #45a049;
+a img:hover {
+  opacity: 0.8; /* Slightly dim the image on hover */
 }
 
 .custom-card {
@@ -99,68 +81,12 @@ p, label {
   padding: 0; /* Elimina el padding */
 }
 
-.table-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.table-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
-  border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Indica que se puede hacer clic */
-}
-
-.table-header {
-  font-weight: bold;
-  background-color: #f5f5f5; /* Color de fondo del encabezado */
-  cursor: default; /* No indica que se puede hacer clic */
-}
-
-.table-row.selected {
-  background-color: #e0f7fa; /* Fondo al hacer clic */
-}
-
-.table-cell {
-  flex: 1;
-  text-align: center;
-}
-
-.table-cell:nth-child(1) {
-  text-align: left;
-}
-
-.table-cell:nth-child(3) {
-  text-align: right;
-}
-
-.progress-bar-container {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.progress-bar {
-  background-color: #e0f7fa;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.progress-bar span {
-  display: block;
-  height: 20px;
-  background-color: #4caf50;
-  border-radius: 5px;
-  text-align: center;
-  color: white;
-}
-
 .image-container {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
+  flex-direction: column;
 }
 
 .image-container img {

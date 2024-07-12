@@ -14,3 +14,51 @@ app-header {
 p, li {
   text-align: justify;
 }
+
+.btn-primary {
+  background-color: #78a890
+  !important;
+  border-color: #78a890
+  !important;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background-color: #547766 !important;
+  border-color: #547766  !important; 
+}
+
+a {
+  color: #4caf50; /* Nuevo color para los enlaces */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Cambia el color de los enlaces cuando se hace hover */
+a:hover {
+  color: #45a049; /* Nuevo color para los enlaces al hacer hover */
+  text-decoration: underline; /* Subrayado al hacer hover */
+}
+
+/* Cambia el color de los enlaces activos */
+a:active {
+  color: #388e3c; /* Nuevo color para los enlaces activos */
+}
+
+/* Cambia el color de los enlaces visitados */
+a:visited {
+  color: #388e3c; /* Nuevo color para los enlaces visitados */
+}
+
+/* Sobrescribe los enlaces dentro de la navbar para mantener el estilo original de Bootstrap */
+.navbar a,
+.navbar-nav .nav-link {
+  color: inherit; /* Mantiene el color original de Bootstrap */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Opcional: Cambia el color de los enlaces en la navbar cuando se hace hover */
+.navbar a:hover,
+.navbar-nav .nav-link:hover {
+  color: inherit; /* Mantiene el color original de Bootstrap */
+  text-decoration: underline; /* Subrayado al hacer hover */
+}
