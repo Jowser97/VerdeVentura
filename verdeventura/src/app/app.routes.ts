@@ -83,47 +83,24 @@ import { UserprofileComponent } from './pages/userprofile/userprofile.component'
 import { RankingComponent } from './pages/ranking/ranking.component';
 import { HomeComponent } from './pages/home/home.component';
 import { GuiaodsComponent } from './pages/guiaods/guiaods.component';
-import { Slide1Component } from './pages/home/slide1/slide1.component';
-import { Slide2Component } from './pages/home/slide2/slide2.component';
-import { Slide3Component } from './pages/home/slide3/slide3.component';
+
 import { DBComponent } from './shared/db/db.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { MigrupoComponent } from './pages/group/migrupo/migrupo.component';
 
 export const routes: Routes = [
-  {
-        path: '',
-        component: HomeComponent,
-        children: [
-          {
-            path: "",
-            redirectTo: "slide1",
-            pathMatch: "full",
-          },
-          {
-            path: 'slide1',
-            component: Slide1Component,
-          },
-          {
-            path: 'slide2',
-            component: Slide2Component,
-          },
-          {
-            path: 'slide3',
-            component: Slide3Component,
-          },
-        ],
-      },
+  { path: '', component: HomeComponent },
   { path: 'retos', component: RetosComponent },
   { path: 'group', component: GroupComponent },
   { path: 'creargrupo', component: CrearComponent },
   { path: 'buscargrupo', component: BuscarComponent },
-  { path: 'migrupo', component: GroupComponent },
+  { path: 'migrupo', component: MigrupoComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'perfil', component: UserprofileComponent },
   { path: 'rank', component: RankingComponent },
   { path: 'guiaods', component: GuiaodsComponent },
-  
+
   { path: 'database', component: DBComponent },
   { path: '**', component: Err404Component },
 ];
