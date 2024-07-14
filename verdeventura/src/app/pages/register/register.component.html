@@ -1,0 +1,89 @@
+<div class="container-fluid custom-container">
+  <div class="row justify-content-center align-items-center min-vh-100">
+    <div class="col-md-4">   
+              
+      <div class="card mt-5 custom-card">
+        <div class="card-body">
+          <h3 class="card-title text-center">USER REGISTER</h3>
+          <form>
+            <div class="form-group">
+              <label for="name" class="visually-hidden">Name</label>
+              <div class="input-group mb-3">
+                <input name="name" [(ngModel)]="name"
+                  type="text"
+                  id="name"
+                  class="form-control"
+                  placeholder="Write your name here"
+                  aria-label="Name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="visually-hidden">Email</label>
+              <div class="input-group mb-3">
+                <input name="email" [(ngModel)]="email"
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Write your email here"
+                  aria-label="Email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="userName" class="visually-hidden">Username</label>
+              <div class="input-group mb-3">
+                <input name="username" [(ngModel)]="username"
+                  type="text"
+                  id="username"
+                  class="form-control"
+                  placeholder="Create a username to use"
+                  aria-label="Username"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password" class="visually-hidden">Contraseña</label>
+              <div class="input-group mb-3">
+                <input name="password" [(ngModel)]="password"
+                  type="password"
+                  id="password"
+                  class="form-control"
+                  placeholder="Create your password"
+                  aria-label="Password"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="CP" class="visually-hidden">CP</label>
+              <div class="input-group mb-3">
+                <input name="cp" [(ngModel)]="cp"
+                  type="string"
+                  id="cp"
+                  class="form-control"
+                  placeholder="Introduce tu Código Postal"
+                  aria-label="Password"
+                  required
+                />
+              </div>
+            </div>
+                          
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary custom-btn mt-3" (click)="onRegister()">
+                REGISTER
+              </button>
+            </div>
+            <div class="d-flex justify-content-center">
+              <p>¿Ya tienes cuenta? <a routerLink="../login" class="link-info">¡Inicia sesión aquí!</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

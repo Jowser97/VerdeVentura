@@ -1,26 +1,24 @@
 <div class="container-fluid custom-container">
   <div class="row justify-content-center align-items-center min-vh-100">
     <div class="col-md-4">
-      <div class="text-center mb-4">
-        <p>
-          Bienvenidos a la web de gamificación de ODS. Donde a través de los
-          retos propuestos podrás proteger el planeta y mejorar las vidas y las
-          perspectivas de las personas de todo el mundo.
-        </p>
-      </div>
-      <div class="card mt-5 custom-card">
+      <div
+        class="card mt-5 custom-card"
+        *ngIf="authService.isLoggedIn() === false"
+      >
         <div class="card-body">
           <h3 class="card-title text-center">USER LOGIN</h3>
           <form>
             <div class="form-group">
-              <label for="email" class="visually-hidden">Email</label>
+              <label for="user" class="visually-hidden">User</label>
               <div class="input-group mb-3">
                 <input
-                  type="email"
-                  id="email"
+                  name="userName"
+                  [(ngModel)]="username"
+                  type="userName"
+                  id="userName"
                   class="form-control"
-                  placeholder="EMAIL"
-                  aria-label="Email"
+                  placeholder="USERNAME"
+                  aria-label="Username"
                 />
               </div>
             </div>
@@ -28,6 +26,8 @@
               <label for="password" class="visually-hidden">Contraseña</label>
               <div class="input-group mb-3">
                 <input
+                  name="password"
+                  [(ngModel)]="password"
                   type="password"
                   id="password"
                   class="form-control"
@@ -44,11 +44,31 @@
               <a href="#" class="forgot-password">Forgot Password?</a>
             </div>
             <div class="d-flex justify-content-center">
-              <button type="submit" class="btn btn-primary custom-btn mt-3">
+              <button
+                type="button"
+                class="btn btn-primary custom-btn mt-3"
+                (click)="onLogin()"
+              >
                 LOGIN
               </button>
             </div>
+            <div class="d-flex justify-content-center">
+              <p>
+                ¿No tienes cuenta?
+                <a routerLink="../register" class="link-info"
+                  >¡Regístrate aquí!</a
+                >
+              </p>
+            </div>
           </form>
+        </div>
+      </div>
+      <div
+        class="card mt-5 custom-card"
+        *ngIf="authService.isLoggedIn() === true"
+      >
+        <div class="card-body text-center">
+          <h3>Bienvenido a nuestro sitio</h3>
         </div>
       </div>
     </div>

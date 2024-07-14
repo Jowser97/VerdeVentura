@@ -17,25 +17,25 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="">Inicio</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="authService.isLoggedIn() === true">
           <a class="nav-link" routerLink="retos">Retos</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="authService.isLoggedIn() === true">
           <a class="nav-link" routerLink="group">Grupos</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="authService.isLoggedIn() === true">
           <a class="nav-link" routerLink="rank">Ranking</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="guiaods">Guia ODS</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="authService.isLoggedIn() === false">
           <a class="nav-link" routerLink="login">Iniciar Sesión</a>
         </li>
        
       </ul>
       <ul class="navbar-nav ms-auto mb-2">
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="authService.isLoggedIn() === true">
           <a class="nav-link" routerLink="perfil">Usuario</a>
         </li>
         <li class="nav-item dropdown">
@@ -43,7 +43,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Ajustes</a></li>
             <li><a class="dropdown-item" href="#">Seguridad</a></li>
-            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+            <li><a class="dropdown-item" (click)="logOut()">Cerrar sesión</a></li>
           </ul>
         </li>
       </ul>

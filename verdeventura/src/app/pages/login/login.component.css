@@ -1,60 +1,115 @@
-/* Estilos para la tarjeta */
-.custom-card {
-  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-}
-
-/* Estilos para el título y el párrafo */
-.text-center h1 {
-  color: #4caf50; /* Color del texto */
-  font-weight: bold;
-}
-
-.text-center p {
-  color: #333; /* Color del texto */
-}
-
-/* Estilos para los inputs */
-.form-control {
-  border: 1px solid #4caf50; /* Borde del input */
-  border-radius: 0; /* Sin bordes redondeados */
-}
-
-/* Estilos para el botón */
-.custom-btn {
-  background-color: #4caf50; /* Color de fondo del botón */
-  border: none; /* Sin borde */
-  padding: 10px 20px; /* Ajustar el tamaño del botón */
-  font-size: 16px; /* Ajustar el tamaño del texto */
-  width: auto; /* Asegura que el botón se ajuste a su contenido */
-}
-
-/* Estilos para el enlace de Forgot Password */
-.forgot-password {
-  color: #4caf50; /* Color del enlace */
-  text-decoration: none; /* Sin subrayado */
-}
-
-.forgot-password:hover {
-  text-decoration: underline; /* Subrayado al pasar el ratón por encima */
-}
-
-/* Estilos para el checkbox */
-.form-group label {
-  color: #333; /* Color del texto */
-}
-
-/* Estilos para el cuerpo */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.min-vh-100 {
-  min-height: 100vh;
-}
-
-.custom-container .row {
-  margin-top: -120px; /* Ajusta este valor para reducir el espacio en la parte superior */
-}
+ 
+  /* Estilos para la tarjeta */
+  .custom-card {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  /* Estilos para el título y el párrafo */
+  .text-center h1 {
+    color: #4caf50; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  .text-center p {
+    color: #333; /* Color del texto */
+  }
+  
+  /* Estilos para los inputs */
+  .form-control {
+    border: 1px solid #4caf50; /* Borde del input */
+    border-radius: 0; /* Sin bordes redondeados */
+  }
+  
+  /* Estilos para el botón */
+  .custom-btn {
+    background-color: #4caf50; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Ajustar el tamaño del botón */
+    font-size: 16px; /* Ajustar el tamaño del texto */
+    width: auto; /* Asegura que el botón se ajuste a su contenido */
+  }
+  
+  /* Estilos para el enlace de Forgot Password */
+  .forgot-password {
+    color: #4caf50; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón por encima */
+  }
+  
+  /* Estilos para el checkbox */
+  .form-group label {
+    color: #333; /* Color del texto */
+  }
+  
+  /* Estilos para el cuerpo */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .min-vh-100 {
+    min-height: 100vh;
+  }
+  
+  /* Estilos para la tarjeta */
+  .custom-card {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  /* Estilos para el título y el párrafo */
+  .text-center h1 {
+    color: #4caf50; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  .text-center p {
+    color: #333; /* Color del texto */
+  }
+  
+  /* Estilos para los inputs */
+  .form-control {
+    border: 1px solid #4caf50; /* Borde del input */
+    border-radius: 0; /* Sin bordes redondeados */
+  }
+  
+  /* Estilos para el botón */
+  .custom-btn {
+    background-color: #4caf50; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Ajustar el tamaño del botón */
+    font-size: 16px; /* Ajustar el tamaño del texto */
+    width: auto; /* Asegura que el botón se ajuste a su contenido */
+  }
+  
+  /* Estilos para el enlace de Forgot Password */
+  .forgot-password {
+    color: #4caf50; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón por encima */
+  }
+  
+  /* Estilos para el checkbox */
+  .form-group label {
+    color: #333; /* Color del texto */
+  }
+  
+  /* Estilos para el cuerpo */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .min-vh-100 {
+    min-height: 100vh;
+  }
+  

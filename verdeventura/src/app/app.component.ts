@@ -6,6 +6,7 @@ import { LoginComponent } from "./pages/login/login.component";
 import { RankingComponent } from "./pages/ranking/ranking.component";
 import { RetosComponent } from "./pages/retos/retos.component";
 import { UserprofileComponent } from "./pages/userprofile/userprofile.component";
+import { Storage, ref, uploadBytes, listAll, getDownloadURL } from '@angular/fire/storage';
 
 @Component({
     selector: 'app-root',
