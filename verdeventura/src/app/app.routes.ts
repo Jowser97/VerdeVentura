@@ -86,7 +86,8 @@ import { GuiaodsComponent } from './pages/guiaods/guiaods.component';
 
 import { DBComponent } from './shared/db/db.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { MigrupoComponent } from './pages/group/migrupo/migrupo.component';
+import { MiGrupoComponent } from './pages/group/migrupo/migrupo.component';
+
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -94,7 +95,7 @@ export const routes: Routes = [
   { path: 'group', component: GroupComponent },
   { path: 'creargrupo', component: CrearComponent },
   { path: 'buscargrupo', component: BuscarComponent },
-  { path: 'migrupo', component: MigrupoComponent },
+  { path: 'migrupo', component: MiGrupoComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'perfil', component: UserprofileComponent },
