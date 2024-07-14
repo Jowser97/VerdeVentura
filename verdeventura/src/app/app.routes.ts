@@ -90,7 +90,29 @@ import { DBComponent } from './shared/db/db.component';
 import { RegisterComponent } from './pages/register/register.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  {
+        path: '',
+        component: HomeComponent,
+        children: [
+          {
+            path: "",
+            redirectTo: "slide1",
+            pathMatch: "full",
+          },
+          {
+            path: 'slide1',
+            component: Slide1Component,
+          },
+          {
+            path: 'slide2',
+            component: Slide2Component,
+          },
+          {
+            path: 'slide3',
+            component: Slide3Component,
+          },
+        ],
+      },
   { path: 'retos', component: RetosComponent },
   { path: 'group', component: GroupComponent },
   { path: 'creargrupo', component: CrearComponent },
@@ -101,9 +123,7 @@ export const routes: Routes = [
   { path: 'perfil', component: UserprofileComponent },
   { path: 'rank', component: RankingComponent },
   { path: 'guiaods', component: GuiaodsComponent },
-  { path: 'slide1', component: Slide1Component },
-  { path: 'slide2', component: Slide2Component },
-  { path: 'slide3', component: Slide3Component },
+  
   { path: 'database', component: DBComponent },
   { path: '**', component: Err404Component },
 ];
