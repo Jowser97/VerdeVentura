@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <!-- Sidebar -->
-    <div class="col-sm-3 position-fixed-top ">
+    <div class="col-sm-3 position-fixed-top">
       <div class="p-3 bg-light rounded shadow mb-3">
         <ul class="list-unstyled">
           <li class="d-flex justify-content-between align-items-center mb-3">
@@ -34,7 +34,56 @@
     </div>
 
     <div class="col-sm-9">
-      <router-outlet></router-outlet>
+      <div *ngFor="let quincena of ['q1', 'q2', 'q3', 'q4']; let index = index">
+        <div class="card mb-3" *ngIf="quincenaSeleccionada === quincena">
+          <h3 class="card-title-quincena">Quincena {{ index + 1 }}</h3>
+          <div
+            *ngFor="let reto of retosPorQuincena[quincena]"
+            class="animate__animated animate__fadeIn ae-grid__item item-lg-4 au-mb-3"
+          >
+            <div class="row g-0">
+              <div class="col-md-2">
+                <img
+                  [src]="getImageUrl(reto)"
+                  width="85%"
+                  alt="Image"
+                  class="au-mb-3 reto-img"
+                />
+              </div>
+              <div class="col-md-10">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Reto {{ numeroDeReto(reto._id_retos_VV) }}: <br />
+                    {{ reto.description }}
+                  </h5>
+                  <p class="card-text">¿Cómo hacerlo? {{ reto.howTo }}</p>
+                  <p class="card-text">
+                    ¡Valídalo para obtener puntos! {{ reto.verification }}
+                  </p>
+                  <p class="card-text">
+                    Puntos otorgados: {{ reto.pointsGiven }}
+                  </p>
+                  <!-- Simplificación para un reto -->
+                  <label class="btn btn-primary">
+                    Subir Imagen
+                    <input
+                      type="file"
+                      style="display: none"
+                      (change)="
+                        uploadImageToDB(
+                          $event,
+                          quincena,
+                          numeroDeReto(reto._id_retos_VV)
+                        )
+                      "
+                    />
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
