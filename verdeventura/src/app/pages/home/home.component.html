@@ -1,63 +1,134 @@
 <div class="container-fluid home-header">
   <div id="header" class="overlay" [ngClass]="getBackgroundClass()">
     <div class="buttons">
-      <button (click)="selectSlide(1)" [class.selected]="selectedSlide === 1">1</button>
-      <button (click)="selectSlide(2)" [class.selected]="selectedSlide === 2">2</button>
-      <button (click)="selectSlide(3)" [class.selected]="selectedSlide === 3">3</button>
+      <button (click)="selectSlide(1)" [class.selected]="selectedSlide === 1">
+        1
+      </button>
+      <button (click)="selectSlide(2)" [class.selected]="selectedSlide === 2">
+        2
+      </button>
+      <button (click)="selectSlide(3)" [class.selected]="selectedSlide === 3">
+        3
+      </button>
     </div>
   </div>
 </div>
 
-
 <div id="contenido" class="container-fluid content-container d-flex flex-row">
-  <div *ngIf="selectedSlide === 1" [ngClass]="animationClass" class="view content custom-view flex-fill" id="view1">
+  <div
+  *ngIf="selectedSlide === 1"
+  [ngClass]="animationClass"
+  class="view content custom-view flex-fill"
+  id="view3"
+>
+  <h2>VERDEVENTURA</h2>
+  <p>
+    El objetivo principal de verdeVentura es fomentar una cultura de
+    sostenibilidad y responsabilidad ambiental a través de la gamificación. La
+    plataforma está diseñada para involucrar a los usuarios en actividades que
+    promuevan los Objetivos de Desarrollo Sostenible (ODS), incentivando
+    cambios positivos en sus comportamientos y hábitos diarios. Al ofrecer
+    retos sostenibles y objetivos puntuables, verdeVentura busca educar,
+    motivar e inspirar a las personas a tomar acciones concretas que
+    beneficien tanto al medio ambiente como a la sociedad.
+  </p>
+  <p>
+    Una de las metas clave de verdeVentura es aumentar la concienciación sobre
+    la importancia de los ODS y cómo cada individuo puede contribuir a su
+    cumplimiento. Mediante la participación en retos, los usuarios aprenden
+    sobre prácticas sostenibles y la relevancia de cada objetivo, desde la
+    reducción de residuos y el uso eficiente de recursos hasta la promoción de
+    la igualdad y el bienestar social. Esta educación práctica y experiencial
+    es esencial para internalizar los valores sostenibles y hacerlos parte
+    integral de la vida cotidiana de los usuarios.
+  </p>
+  <p>
+    Además, verdeVentura se propone crear una comunidad activa y comprometida
+    con la sostenibilidad. Al formar grupos y competir en un ranking, los
+    usuarios no solo se motivan a sí mismos, sino que también inspiran a otros
+    a unirse a la causa. Este sentido de comunidad y colaboración es
+    fundamental para generar un movimiento amplio y eficaz hacia un futuro más
+    sostenible.
+  </p>
+  <p>
+    Otro objetivo crucial de verdeVentura es demostrar que la sostenibilidad
+    puede ser divertida y gratificante. Al incorporar elementos de juego, como
+    la acumulación de puntos y la competencia amistosa, la plataforma
+    transforma tareas que de otro modo podrían parecer abrumadoras en
+    actividades atractivas y desafiantes. Esto no solo aumenta la
+    participación, sino que también ayuda a mantener el interés y el
+    compromiso a largo plazo.
+  </p>
+</div>
+  
+  <div
+    *ngIf="selectedSlide === 2"
+    [ngClass]="animationClass"
+    class="view content custom-view flex-fill"
+    id="view1"
+  >
     <h1 id="title">FUNDADORES</h1>
     <div class="row">
       <div class="col">
         <h3>Alexandre Román Díaz</h3>
-        <img src="https://placehold.co/200x150" alt="placeholder" />
+        <img src="https://placehold.co/400x400" alt="placeholder" />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima at
-          ex officia neque ipsa, adipisci laborum.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima at ex
+          officia neque ipsa, adipisci laborum.
         </p>
         <div class="button-group">
-          <button class="btn btn-primary">LinkedIn</button>
-          <button class="btn btn-secondary">GitHub</button>
-          <button class="btn btn-info">Placeholder</button>
+          <a href="https://www.linkedin.com/in/alexandre-roman-diaz/" class="btn btn-primary btn-lg" target="_blank">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/AchillesD9-Alex" class="btn btn-primary btn-lg" target="_blank">
+            <i class="bi bi-github"></i> 
+          </a>
+         
         </div>
       </div>
       <div class="col">
         <h3>Aurora Socorro Ruiz</h3>
-        <img src="https://placehold.co/200x150" alt="placeholder" />
+        <img src="https://placehold.co/400x400" alt="placeholder" />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima at
-          ex officia neque ipsa, adipisci laborum.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima at ex
+          officia neque ipsa, adipisci laborum.
         </p>
         <div class="button-group">
-          <button class="btn btn-primary">LinkedIn</button>
-          <button class="btn btn-secondary">GitHub</button>
-          <button class="btn btn-info">Placeholder</button>
+          <a href="https://www.linkedin.com/in/aurora-socorro/" class="btn btn-primary btn-lg" target="_blank">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/Anatagora" class="btn btn-primary btn-lg" target="_blank">
+            <i class="bi bi-github"></i> 
+          </a>
+         
         </div>
-          
       </div>
       <div class="col">
         <h3>Jose Ramón Ruiz Aguilar</h3>
-        <img src="https://placehold.co/200x150" alt="placeholder" />
+        <img src="https://placehold.co/400x400" alt="placeholder" />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima at
-          ex officia neque ipsa, adipisci laborum.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima at ex
+          officia neque ipsa, adipisci laborum.
         </p>
         <div class="button-group">
-          <button class="btn btn-primary">LinkedIn</button>
-          <button class="btn btn-secondary">GitHub</button>
-          <button class="btn btn-info">Placeholder</button>
+          <a href="https://www.linkedin.com/in/jose-ramon-ruiz-aguilar/" class="btn btn-primary btn-lg" target="_blank">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/Jowser97" class="btn btn-primary btn-lg" target="_blank">
+            <i class="bi bi-github"></i> 
+          </a>
+         
         </div>
-          
       </div>
     </div>
   </div>
 
-  <div *ngIf="selectedSlide === 2" [ngClass]="animationClass" class="view content custom-view flex-fill" id="view2">
+  <div
+    *ngIf="selectedSlide === 3"
+    [ngClass]="animationClass"
+    class="view content custom-view flex-fill"
+    id="view2"
+  >
     <h2>¿QUÉ ES VERDEVENTURA?</h2>
     <p>
       VerdeVentura es una innovadora plataforma social basada en la
@@ -97,44 +168,5 @@
     </p>
   </div>
 
-  <div *ngIf="selectedSlide === 3" [ngClass]="animationClass" class="view content custom-view flex-fill" id="view3">
-    <h2>VERDEVENTURA</h2>
-    <p>
-      El objetivo principal de verdeVentura es fomentar una cultura de
-      sostenibilidad y responsabilidad ambiental a través de la gamificación. La
-      plataforma está diseñada para involucrar a los usuarios en actividades que
-      promuevan los Objetivos de Desarrollo Sostenible (ODS), incentivando
-      cambios positivos en sus comportamientos y hábitos diarios. Al ofrecer
-      retos sostenibles y objetivos puntuables, verdeVentura busca educar,
-      motivar e inspirar a las personas a tomar acciones concretas que
-      beneficien tanto al medio ambiente como a la sociedad.
-    </p>
-    <p>
-      Una de las metas clave de verdeVentura es aumentar la concienciación sobre
-      la importancia de los ODS y cómo cada individuo puede contribuir a su
-      cumplimiento. Mediante la participación en retos, los usuarios aprenden
-      sobre prácticas sostenibles y la relevancia de cada objetivo, desde la
-      reducción de residuos y el uso eficiente de recursos hasta la promoción de
-      la igualdad y el bienestar social. Esta educación práctica y experiencial
-      es esencial para internalizar los valores sostenibles y hacerlos parte
-      integral de la vida cotidiana de los usuarios.
-    </p>
-    <p>
-      Además, verdeVentura se propone crear una comunidad activa y comprometida
-      con la sostenibilidad. Al formar grupos y competir en un ranking, los
-      usuarios no solo se motivan a sí mismos, sino que también inspiran a otros
-      a unirse a la causa. Este sentido de comunidad y colaboración es
-      fundamental para generar un movimiento amplio y eficaz hacia un futuro más
-      sostenible.
-    </p>
-    <p>
-      Otro objetivo crucial de verdeVentura es demostrar que la sostenibilidad
-      puede ser divertida y gratificante. Al incorporar elementos de juego, como
-      la acumulación de puntos y la competencia amistosa, la plataforma
-      transforma tareas que de otro modo podrían parecer abrumadoras en
-      actividades atractivas y desafiantes. Esto no solo aumenta la
-      participación, sino que también ayuda a mantener el interés y el
-      compromiso a largo plazo.
-    </p>
-  </div>
+
 </div>

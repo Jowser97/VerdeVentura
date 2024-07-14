@@ -9,6 +9,7 @@ export interface user_VV {
     points: number;
     _id_grupos_VV?: number;
     created: string;
+    cptxt?:string;
   }
   
   export interface retos_VV {

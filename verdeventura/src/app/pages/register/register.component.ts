@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { user_VV } from '../../interfaces/verdeventura.interfaces';
 import { Timestamp } from '@angular/fire/firestore';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 
 @Component({
@@ -20,14 +20,15 @@ export class RegisterComponent {
   username: string = '';
   password: string = '';
   email: string = '';
-  cp: number = 0;
+  cp: number = 0; 
+  cptxt: string = '';
   rol: string = 'USER';
   points: number = 0;
   group: number = 1;
   created: string = this.getCurrentFormattedDate(); // Formatear la fecha al inicializar
   users: user_VV[] = [];
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     this.loadUsers();
   }
 
@@ -69,18 +70,22 @@ export class RegisterComponent {
       return;
     }
 
-    if (this.username !== '' && this.password !== '') {
-      const newUser: user_VV = {
+    if (this.username !== '' && this.password !== '') { 
+    
+      const newUser: user_VV = { 
+        cp: parseInt(this.cptxt, 10),
         _id_user_VV: newId,
         username: this.username,
         password: this.password,
         name: this.name,
         email: this.email,
-        cp: this.cp,
+        cptxt: this.cptxt,
         rol: this.rol,
         points: this.points,
         created: this.created
       };
+
+     
 
       this.users.push(newUser);
 
@@ -89,6 +94,7 @@ export class RegisterComponent {
         alert('Registro exitoso');
         this.username = '';
         this.password = '';
+        this.router.navigate(['/login']);
       } catch (error) {
         console.error('Error al guardar el usuario:', error);
         alert('Error al registrar el usuario');

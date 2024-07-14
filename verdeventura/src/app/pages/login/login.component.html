@@ -1,24 +1,21 @@
 <div class="container-fluid custom-container">
-  <div class="row justify-content-center align-items-center min-vh-100">
+  <div class="row justify-content-center min-vh-100">
     <div class="col-md-4">
-      <div
-        class="card mt-5 custom-card"
-        *ngIf="authService.isLoggedIn() === false"
-      >
+      <div *ngIf="!authService.isLoggedIn()" class="card mt-5 custom-card">
         <div class="card-body">
-          <h3 class="card-title text-center">USER LOGIN</h3>
+          <h3 class="card-title text-center">Iniciar sesión</h3>
           <form>
             <div class="form-group">
-              <label for="user" class="visually-hidden">User</label>
+              <label for="userName" class="visually-hidden">Usuario</label>
               <div class="input-group mb-3">
                 <input
                   name="userName"
                   [(ngModel)]="username"
-                  type="userName"
+                  type="text"
                   id="userName"
                   class="form-control"
-                  placeholder="USERNAME"
-                  aria-label="Username"
+                  placeholder="Usuario"
+                  aria-label="Usuario"
                 />
               </div>
             </div>
@@ -31,17 +28,17 @@
                   type="password"
                   id="password"
                   class="form-control"
-                  placeholder="PASSWORD"
-                  aria-label="Password"
+                  placeholder="Contraseña"
+                  aria-label="Contraseña"
                 />
               </div>
             </div>
             <div class="form-group d-flex justify-content-between">
               <div>
                 <input type="checkbox" id="remember" name="remember" />
-                <label for="remember">Remember</label>
+                <label for="remember">Recordar</label>
               </div>
-              <a href="#" class="forgot-password">Forgot Password?</a>
+              <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
             </div>
             <div class="d-flex justify-content-center">
               <button
@@ -49,10 +46,10 @@
                 class="btn btn-primary custom-btn mt-3"
                 (click)="onLogin()"
               >
-                LOGIN
+                Iniciar Sesión
               </button>
             </div>
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center mt-3">
               <p>
                 ¿No tienes cuenta?
                 <a routerLink="../register" class="link-info"
@@ -63,12 +60,10 @@
           </form>
         </div>
       </div>
-      <div
-        class="card mt-5 custom-card"
-        *ngIf="authService.isLoggedIn() === true"
-      >
+      <div *ngIf="authService.isLoggedIn()" class="card mt-5 custom-card">
         <div class="card-body text-center">
-          <h3>Bienvenido a nuestro sitio</h3>
+          <h3>¡Bienvenido, {{authService.getUsername()}}!</h3>
+          <span class="btn btn-primary btn-lg" routerLink="/group">¡EMPIEZA TU AVENTURA!</span>
         </div>
       </div>
     </div>
