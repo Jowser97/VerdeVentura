@@ -1,55 +1,112 @@
 <div class="container-fluid no-padding">
   <div class="row no-margin">
     <!-- Información del Usuario -->
-    <div class="col-md-4 no-margin">
+    <div class="col-md-4 no-margin ">
       <div class="p-3 bg-light custom-card no-margin">
         <div class="text-center image-container">
           <img
-            src="https://via.placeholder.com/300"
+            [src]="
+              currentUser?.profileImage ||
+              'https://firebasestorage.googleapis.com/v0/b/verdeventura-db.appspot.com/o/imgUser%2Fdefault.jpeg?alt=media&token=8729918d-308a-45be-a289-8b6992e62ebd'
+            "
             alt="User Avatar"
             class="img-fluid rounded-circle mb-3"
           />
-          <div class="change-image-text">Cambiar Imagen</div>
+          <div
+            class="change-image-text"
+            data-bs-toggle="modal"
+            data-bs-target="#imageGalleryModal"
+          >
+            Cambiar Imagen
+          </div>
         </div>
         <div class="user-info">
-          <h5>NOMBRE USUARIO</h5>
+          <h2 class="mb-4">{{ currentUser?.username }}</h2>
         </div>
-        <ul class="list-unstyled">
-          <li class="mb-3">
-            <a href="#"><i class="bi bi-people-fill"></i> MIS RETOS</a>
-          </li>
-          <li class="mb-3">
-            <a href="#"><i class="bi bi-folder-fill"></i> ARCHIVOS</a>
-          </li>
-        </ul>
-        <p class="mt-3 text-center"><a href="#">Ayuda</a></p>
+        <div class="d-grid gap-2">
+          <a class="btn btn-primary btn-block" (click)="navigateToRetos()">
+            <i class="bi bi-people-fill"></i> MIS RETOS
+          </a>
+          <a class="btn btn-primary btn-block" (click)="navigateToGroup()">
+            <i class="bi bi-folder-fill"></i> MI GRUPO
+          </a>
+        </div>
       </div>
     </div>
+
     <!-- Contenido Principal -->
-    <div class="col-md-8 no-margin">
+    <div class="col-md-8 no-margin ">
       <div class="p-3 bg-light custom-card no-margin">
-        <h3 class="text-center">INFORMACIÓN DE USUARIO</h3>
+        <h3 class=" mb-4">INFORMACIÓN DE USUARIO</h3>
         <div class="row">
           <div class="col-md-6">
             <h5>INFORMACIÓN</h5>
             <ul>
-              <li>Código Postal</li>
-              <li>Ciudad</li>
-              <li>e-mail</li>
-              <li>Nombre de usuario</li>
-              <li>Fecha de creación</li>
-              <li>Fecha de nacimiento</li>
+              <li>Código Postal: {{ currentUser?.cp }}</li>
+              <li>e-mail: {{ currentUser?.email }}</li>
+              <li>Nombre de usuario: {{ currentUser?.username }}</li>
+              <li>Fecha de creación: {{ currentUser?.created }}</li>
             </ul>
           </div>
           <div class="col-md-6">
-            <h5>LOGIN ACTIVITY</h5>
-            <p>Lunes, 17 Enero, 2024, 12pm ( hace 15 días)</p>
             <h5>RETOS</h5>
             <ul>
-              <li>Número de retos cumplidos:</li>
-              <li>Puntos totales:</li>
-              <li>Grupo al que perteneces:</li>
+              <li>Verdecitos: {{ currentUser?.points }}</li>
+              <li>
+                Grupo al que perteneces:
+                {{
+                  currentGroupName
+                    ? currentGroupName
+                    : "Aún no perteneces a ningún grupo."
+                }}
+              </li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal para galería de imágenes -->
+    <div
+      class="modal fade"
+      id="imageGalleryModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="imageGalleryModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="imageGalleryModalLabel">
+              Seleccionar Imagen de Perfil
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-4" *ngFor="let image of imageList">
+                <img
+                  [src]="image.url"
+                  alt="Profile Image"
+                  class="img-thumbnail"
+                  (click)="selectProfileImage(image.url)"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
           </div>
         </div>
       </div>

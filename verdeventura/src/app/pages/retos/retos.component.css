@@ -67,3 +67,18 @@ a img:hover {
   padding: 20px;
 }
 
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Asegúrate de que el contenedor tenga altura para centrar verticalmente */
+}
+
+.reto-img {
+  width: 100%; /* Ajusta la imagen al 100% del ancho del contenedor */
+  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+  max-width: 150px; /* Tamaño máximo de la imagen */
+  max-height: 150px; /* Tamaño máximo de la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+  border-radius: 8px; /* Opcional: añade bordes redondeados */
+}

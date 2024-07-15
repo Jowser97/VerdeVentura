@@ -45,6 +45,23 @@ export class ImageService {
       });
   }
 
+  getImagesProfile(): Promise<string[]> {
+    const imagesRef = ref(this.storage, 'imgUser');
+    return listAll(imagesRef)
+      .then(async response => {
+        const urls = [];
+        for (let item of response.items) {
+          const url = await getDownloadURL(item);
+          urls.push(url);
+        }
+        return urls;
+      })
+      .catch(error => {
+        console.error('Error al obtener las imágenes:', error);
+        throw error;
+      });
+  }
+
   getLatestImageUrl(): string | null {
     return this.latestImageUrl;
   }

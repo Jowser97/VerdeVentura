@@ -46,7 +46,7 @@ a img:hover {
   margin: 10px; /* Márgenes entre tarjetas */
 }
 
-h5, h3 {
+h2, h3, h5 {
   color: #4caf50; /* Color del texto */
   font-weight: bold;
 }
@@ -140,3 +140,8 @@ p, label {
 .list-unstyled li i {
   margin-right: 5px;
 }
+
+.nav-link {
+  cursor: pointer;
+}
+

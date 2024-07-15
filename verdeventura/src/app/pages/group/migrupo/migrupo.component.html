@@ -1,25 +1,48 @@
 <div class="container-fluid no-padding" *ngIf="grupoActual">
   <div class="row no-margin">
     <!-- Información del Usuario -->
-    <div class="col-md-4 no-margin">
+    <div class="col-md-4 no-margin animate__animated animate__zoomIn">
       <div class="p-3 bg-light custom-card no-margin">
         <div class="text-center">
-          <img src="https://via.placeholder.com/300" alt="User Avatar" class="img-fluid rounded-circle mb-3">
-          <h5>{{ currentUser?.username }}</h5>
+          <img
+            [src]="
+              currentUser?.profileImage ||
+              'https://firebasestorage.googleapis.com/v0/b/verdeventura-db.appspot.com/o/imgUser%2Fdefault.jpeg?alt=media&token=8729918d-308a-45be-a289-8b6992e62ebd'
+            "
+            alt="User Avatar"
+            class="img-fluid rounded-circle mb-3"
+          />
+          <h3 class="mb-4">{{ currentUser?.username }}</h3>
         </div>
-        <p>Mis puntos: {{ currentUser?.points }} verdecitos</p>
-        <p>Tipo grupo: {{ grupoActual.data.public ? 'público' : 'privado' }}</p>
+        <p>Mis Verdecitos: {{ currentUser?.points }} verdecitos</p>
+        <p>Tipo grupo: {{ grupoActual.data.public ? "público" : "privado" }}</p>
         <p>Tamaño del grupo: {{ grupoActual.data.size }}</p>
         <p>ID grupo: {{ grupoActual.data._id_grupos_VV }}</p>
         <div class="form-group" *ngIf="!grupoActual.data.public">
           <label for="groupPass">Contraseña del grupo:</label>
-          <input type="text" id="groupPass" class="form-control" [value]="grupoActual.data.public ? 'GRUPO PUBLICO' : grupoActual.data.groupPass" readonly>
+          <input
+            type="text"
+            id="groupPass"
+            class="form-control"
+            [value]="
+              grupoActual.data.public
+                ? 'GRUPO PUBLICO'
+                : grupoActual.data.groupPass
+            "
+            readonly
+          />
         </div>
-        <button type="button" class="btn btn-primary custom-btn mt-3" (click)="leaveGroup()">SALIR DEL GRUPO</button>
+        <button
+          type="button"
+          class="btn btn-primary custom-btn mt-3"
+          (click)="leaveGroup()"
+        >
+          SALIR DEL GRUPO
+        </button>
       </div>
     </div>
     <!-- Información del Grupo -->
-    <div class="col-md-8 no-margin">
+    <div class="col-md-8 no-margin animate__animated animate__zoomIn">
       <div class="p-3 bg-light custom-card no-margin">
         <h3 class="text-center">MI GRUPO</h3>
         <div class="row">
@@ -30,9 +53,13 @@
               <div class="table-container">
                 <div class="table-row table-header">
                   <div class="table-cell">NOMBRE USUARIO</div>
-                  <div class="table-cell">PUNTOS</div>
+                  <div class="table-cell">VERDECITOS</div>
                 </div>
-                <div *ngFor="let member of grupoActual.data.members?.split(', ') || []">
+                <div
+                  *ngFor="
+                    let member of grupoActual.data.members?.split(', ') || []
+                  "
+                >
                   <div class="table-row">
                     <div class="table-cell">{{ member }}</div>
                     <div class="table-cell">{{ getUserPoints(member) }}</div>
@@ -44,12 +71,16 @@
           <!-- Información del Grupo -->
           <div class="col-md-6">
             <div class="p-3 bg-light custom-card">
-              <h5>PUNTOS TOTALES GRUPO</h5>
-              <p>{{ getTotalGroupPoints() }} puntos</p>
+              <h5>VERDECITOS TOTALES GRUPO</h5>
+              <p>{{ getTotalGroupPoints() }} Verdecitos</p>
               <h5>RANKING MIEMBROS</h5>
               <div class="progress-bar-container">
                 <div *ngFor="let member of getRanking()" class="progress-bar">
-                  <span [style.width.%]="getUserPoints(member) / getMaxPoints() * 100">
+                  <span
+                    [style.width.%]="
+                      (getUserPoints(member) / getMaxPoints()) * 100
+                    "
+                  >
                     {{ member }} - {{ getUserPoints(member) }}
                   </span>
                 </div>

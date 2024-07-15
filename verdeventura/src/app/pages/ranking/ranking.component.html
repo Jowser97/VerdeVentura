@@ -3,62 +3,41 @@
     <!-- Columna izquierda: Ranking según el grupo -->
     <div class="col-md-6">
       <div class="p-3 bg-light custom-card">
-        <h5 class="text-center">Ranking por Grupo</h5>
-        <div class="ranking-group">
-          <div class="d-flex justify-content-between">
-            <span>Grupo A</span>
-            <span>120 puntos</span>
+        <h5>RANKING MIEMBROS</h5>
+        <div class="progress-bar-container">
+          <div *ngFor="let member of getRanking()" class="progress-bar">
+            <span
+              [style.width.%]="(getUserPoints(member) / getMaxPoints()) * 100"
+            >
+              {{ member }} - {{ getUserPoints(member) }}
+            </span>
           </div>
-          <div class="progress mb-3">
-            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <div class="d-flex justify-content-between">
-            <span>Grupo B</span>
-            <span>110 puntos</span>
-          </div>
-          <div class="progress mb-3">
-            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <div class="d-flex justify-content-between">
-            <span>Grupo C</span>
-            <span>100 puntos</span>
-          </div>
-          <div class="progress mb-3">
-            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <!-- Añade más elementos según sea necesario -->
         </div>
+        <br />
+        <h5>VERDECITOS TOTALES GRUPO</h5>
+        <p>{{ getTotalGroupPoints() }} Verdecitos</p>
       </div>
     </div>
-    
+
     <!-- Columna derecha: Ranking según el código postal -->
     <div class="col-md-6">
       <div class="p-3 bg-light custom-card">
-        <h5 class="text-center">Ranking por Código Postal</h5>
-        <div class="ranking-postal-code">
-          <div class="d-flex justify-content-between">
-            <span>Código Postal 12345</span>
-            <span>130 puntos</span>
+        <h5>RANKING USUARIOS - LOCAL</h5>
+        <div class="progress-bar-container">
+          <div *ngFor="let cpUser of getLocRanking()" class="progress-bar">
+            <span
+              [style.width.%]="
+                (getUserLocPoints(cpUser) / getMaxLocPoints()) * 100
+              "
+            >
+              {{ cpUser }} - {{ getUserLocPoints(cpUser) }}
+            </span>
           </div>
-          <div class="progress mb-3">
-            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <div class="d-flex justify-content-between">
-            <span>Código Postal 67890</span>
-            <span>120 puntos</span>
-          </div>
-          <div class="progress mb-3">
-            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <div class="d-flex justify-content-between">
-            <span>Código Postal 11223</span>
-            <span>110 puntos</span>
-          </div>
-          <div class="progress mb-3">
-            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <!-- Añade más elementos según sea necesario -->
         </div>
+        <br />
+        <h5>VERDECITOS TOTALES GRUPO</h5>
+        
+        <p>{{ getTotalLocationPoints() }} Verdecitos</p>
       </div>
     </div>
   </div>

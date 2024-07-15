@@ -87,11 +87,13 @@ import { GuiaodsComponent } from './pages/guiaods/guiaods.component';
 import { DBComponent } from './shared/db/db.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { MiGrupoComponent } from './pages/group/migrupo/migrupo.component';
+import { SeasonalComponent } from './pages/retos/seasonal/seasonal.component';
 
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'retos', component: RetosComponent },
+  { path: 'retos/seasonal', component: SeasonalComponent },
   { path: 'group', component: GroupComponent },
   { path: 'creargrupo', component: CrearComponent },
   { path: 'buscargrupo', component: BuscarComponent },

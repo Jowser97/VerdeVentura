@@ -7,6 +7,6 @@
     z-index: 1030; /* Asegura que la navbar esté por encima de otros elementos */
   }
 
-  .nav-link {
+  a {
     cursor: pointer;
   }
