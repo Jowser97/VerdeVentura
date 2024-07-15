@@ -1,19 +1,15 @@
 #scrollToTopBtn {
-  background-color: #78a890 !important;
-  border-color: #78a890 !important;
-  color: white !important;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 20px; /* Place the button 20px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  width: 150px; /* Adjust width */
+  height: 150px; /* Adjust height */
 }
 
 #scrollToTopBtn:hover {
-  background-color: #45a049; /* Add a dark-grey background on hover */
+  opacity: 0.8; /* Slight opacity change on hover */
 }
+

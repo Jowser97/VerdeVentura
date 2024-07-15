@@ -27,6 +27,6 @@ export class HeaderComponent {
   logOut() {
     this.authService.logout();
     alert('Sesión cerrada');
-    this.router.navigate(['/login']); // Redirigir a la página de login
+    this.router.navigate(['/hastapronto']); // Redirigir a la página de login
   }
 }

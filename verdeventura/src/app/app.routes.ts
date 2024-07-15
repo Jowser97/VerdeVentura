@@ -88,6 +88,7 @@ import { DBComponent } from './shared/db/db.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { MiGrupoComponent } from './pages/group/migrupo/migrupo.component';
 import { SeasonalComponent } from './pages/retos/seasonal/seasonal.component';
+import { SesionCerradaComponent } from './pages/sesion-cerrada/sesion-cerrada.component';
 
 
 export const routes: Routes = [
@@ -100,6 +101,7 @@ export const routes: Routes = [
   { path: 'migrupo', component: MiGrupoComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'hastapronto', component: SesionCerradaComponent },
   { path: 'perfil', component: UserprofileComponent },
   { path: 'rank', component: RankingComponent },
   { path: 'guiaods', component: GuiaodsComponent },

@@ -15,7 +15,7 @@ export class ScrollToTopComponent {
   onWindowScroll() {
     const button = document.getElementById('scrollToTopBtn');
     if (button) {
-      if (window.pageYOffset > 20) {
+      if (window.scrollY > 300) {
         button.style.display = 'block';
       } else {
         button.style.display = 'none';
