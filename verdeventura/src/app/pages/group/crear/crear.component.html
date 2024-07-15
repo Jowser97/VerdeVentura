@@ -1,18 +1,27 @@
 <div class="container-fluid no-padding">
   <div class="row no-margin">
     <!-- Ayuda -->
-    <div class="col-md-4 no-margin ">
+    <div class="col-md-4 no-margin">
       <div class="p-3 bg-light custom-card no-margin">
         <h5>AYUDA</h5>
         <ul>
           <li>
             <strong>TIPO DE GRUPO:</strong>
-            <p>G. Privado: Sólo podrán acceder aquellas personas que tengan la contraseña.</p>
-            <p>G. Público: cualquier persona podrá acceder de forma pública y formar parte del grupo.</p>
+            <p>
+              Grupo público: cualquier persona podrá acceder de forma pública y
+              formar parte del grupo.
+            </p>
+            <p>
+              Grupo privado: Sólo podrán acceder aquellas personas que tengan la
+              contraseña.
+            </p>
           </li>
           <li>
             <strong>TAMAÑO DE GRUPO:</strong>
-            <p>Podrás seleccionar entre 2 opciones de tamaño: 5 participantes o 10 participantes.</p>
+            <p>
+              Podrás seleccionar entre 2 opciones de tamaño: 5 participantes o
+              10 participantes.
+            </p>
           </li>
           <li>
             <strong>CONTRASEÑA:</strong>
@@ -22,33 +31,82 @@
       </div>
     </div>
     <!-- Formulario de Creación de Grupo -->
-    <div class="col-md-8 no-margin ">
+    <div class="col-md-8 no-margin">
       <div class="p-3 bg-light custom-card no-margin">
         <h5>FORMULARIO CREACIÓN DE GRUPO</h5>
         <form>
           <div class="form-group">
             <label for="groupName">Nombre de grupo</label>
-            <input type="text" class="form-control" id="groupName" placeholder="Escriba aquí..." [(ngModel)]="groupName" name="groupName" required>
+            <input
+              type="text"
+              class="form-control"
+              id="groupName"
+              placeholder="Escriba aquí..."
+              [(ngModel)]="groupName"
+              name="groupName"
+              required
+            />
           </div>
           <div class="form-group">
-            <label>Tipo de grupo</label><br>
-            <input type="radio" id="publico" name="public" [(ngModel)]="public" [value]="true" required>
-            <label for="publico">Grupo público</label><br>
-            <input type="radio" id="privado" name="public" [(ngModel)]="public" [value]="false" required>
+            <label>Tipo de grupo</label><br />
+            <input
+              type="radio"
+              id="publico"
+              name="public"
+              [(ngModel)]="public"
+              [value]="true"
+              required
+            />
+            <label for="publico">Grupo público</label><br />
+            <input
+              type="radio"
+              id="privado"
+              name="public"
+              [(ngModel)]="public"
+              [value]="false"
+              required
+            />
             <label for="privado">Grupo privado</label>
           </div>
           <div class="form-group">
-            <label>Tamaño del grupo</label><br>
-            <input type="radio" id="size5" name="sizeGroup" [(ngModel)]="sizeGroup" [value]="5" required>
-            <label for="size5">5 participantes</label><br>
-            <input type="radio" id="size10" name="sizeGroup" [(ngModel)]="sizeGroup" [value]="10" required>
+            <label>Tamaño del grupo</label><br />
+            <input
+              type="radio"
+              id="size5"
+              name="sizeGroup"
+              [(ngModel)]="sizeGroup"
+              [value]="5"
+              required
+            />
+            <label for="size5">5 participantes</label><br />
+            <input
+              type="radio"
+              id="size10"
+              name="sizeGroup"
+              [(ngModel)]="sizeGroup"
+              [value]="10"
+              required
+            />
             <label for="size10">10 participantes</label>
           </div>
           <div class="form-group" *ngIf="!public">
             <label for="contrasena">Contraseña</label>
-            <input type="password" class="form-control" id="contrasena" placeholder="Escriba aquí..." [(ngModel)]="contrasena" name="contrasena">
+            <input
+              type="password"
+              class="form-control"
+              id="contrasena"
+              placeholder="Escriba aquí..."
+              [(ngModel)]="contrasena"
+              name="contrasena"
+            />
           </div>
-          <button type="button" class="btn btn-primary custom-btn mt-3" (click)="crearGrupo()">CREAR GRUPO</button>
+          <button
+            type="button"
+            class="btn btn-primary custom-btn mt-3"
+            (click)="crearGrupo()"
+          >
+            CREAR GRUPO
+          </button>
         </form>
       </div>
     </div>

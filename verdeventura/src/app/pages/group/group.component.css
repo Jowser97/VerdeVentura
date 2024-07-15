@@ -33,3 +33,8 @@
     justify-content: center;
   }
   
+  h1  {
+    color: #4caf50; /* Color del texto */
+    font-weight: bold;
+  }
+  

@@ -1,44 +1,58 @@
-<div class="col-sm-9">
-  <div *ngFor="let quincena of ['seasonq1', 'seasonq2', 'seasonq3', 'seasonq4']; let index = index">
-    <div class="card mb-3">
-      <h2 id="title" class="card-title-quincena">
-        Quincena {{ index + 1 }}
-      </h2>
-      <div *ngIf="retosPorQuincena[quincena] && retosPorQuincena[quincena].length > 0">
-        <div *ngFor="let reto of retosPorQuincena[quincena]" class="animate__animated animate__fadeIn ae-grid__item item-lg-4 au-mb-3">
-          <div class="row g-0">
-            <div class="col-md-2 image-container">
-              <img [src]="getImageUrl(reto)" alt="Image" class="reto-img" />
-            </div>
-            <div class="col-md-10">
-              <div class="card-body">
-                <h5 class="card-title">
-                  Reto {{ seasonNumeroDeQuincena(reto._id_retos_VV) }}: <br />
-                  {{ reto.description }}
-                </h5>
-                <p class="card-text">¿Cómo hacerlo? {{ reto.howTo }}</p>
-                <p class="card-text">
-                  ¡Valídalo para obtener verdecitos! {{ reto.verification }}
-                </p>
-                <p class="card-text">
-                  Verdecitos otorgados: {{ reto.pointsGiven }}
-                </p>
-                <!-- Simplificación para un reto -->
-                <label class="btn btn-primary">
-                  Subir Imagen
-                  <input
-                    type="file"
-                    style="display: none"
-                    (change)="uploadImageToDB($event, quincena, seasonNumeroDeQuincena(reto._id_retos_VV))"
-                  />
-                </label>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Contenido principal -->
+    <div class="col-sm-9">
+      <div *ngFor="let quincena of ['seasonq1', 'seasonq2', 'seasonq3', 'seasonq4']; let index = index">
+        <div class="card mb-3">
+          <h2 id="title" class="card-title-quincena">
+            Quincena {{ index + 1 }}
+          </h2>
+          <div *ngIf="retosPorQuincena[quincena] && retosPorQuincena[quincena].length > 0">
+            <div *ngFor="let reto of retosPorQuincena[quincena]" class="animate__animated animate__fadeIn ae-grid__item item-lg-4 au-mb-3">
+              <div class="row g-0">
+                <div class="col-md-2 image-container">
+                  <img [src]="getImageUrl(reto)" alt="Image" class="reto-img" />
+                </div>
+                <div class="col-md-10">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Reto {{ seasonNumeroDeQuincena(reto._id_retos_VV) }}: <br />
+                      {{ reto.description }}
+                    </h5>
+                    <p class="card-text">¿Cómo hacerlo? {{ reto.howTo }}</p>
+                    <p class="card-text">
+                      ¡Valídalo para obtener verdecitos! {{ reto.verification }}
+                    </p>
+                    <p class="card-text">
+                      Verdecitos otorgados: {{ reto.pointsGiven }}
+                    </p>
+                    <!-- Simplificación para un reto -->
+                    <label class="btn btn-primary">
+                      Subir Imagen
+                      <input
+                        type="file"
+                        style="display: none"
+                        (change)="uploadImageToDB($event, quincena, seasonNumeroDeQuincena(reto._id_retos_VV))"
+                      />
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div *ngIf="!retosPorQuincena[quincena] || retosPorQuincena[quincena].length === 0">
+            <p class="text-center">No hay retos disponibles para esta quincena.</p>
+          </div>
         </div>
       </div>
-      <div *ngIf="!retosPorQuincena[quincena] || retosPorQuincena[quincena].length === 0">
-        <p class="text-center">No hay retos disponibles para esta quincena.</p>
+    </div>
+
+    <!-- Contenedor del banner -->
+    <div class="col-sm-3">
+      <div class="banner-container">
+        <!-- Aquí puedes añadir el contenido de tu banner -->
+        <img src="/assets/infoseasonal.png" alt="Banner" class="img-fluid" />
+        <!-- O cualquier otro contenido que desees -->
       </div>
     </div>
   </div>
