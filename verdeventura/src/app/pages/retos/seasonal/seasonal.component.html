@@ -1,75 +1,44 @@
-<div class="main-content p-3 bg-light rounded shadow">
-  <h2>RETO SEASON</h2>
-  <h4>Descripcion</h4>
-
-  <!-- Card 1 -->
-  <div class="card mb-3">
-    <div class="row g-0">
-      <div class="col-md-2">
-        <img src="placeholder.png" alt="Image 1" class="img-fluid" />
-      </div>
-      <div class="col-md-10">
-        <div class="card-body">
-          <h5 class="card-title">Durante la primera quincena...</h5>
-          <p class="card-text">DESCRIPCION DE RETO</p>
-          <button class="btn btn-primary">Button</button>
+<div class="col-sm-9">
+  <div *ngFor="let quincena of ['seasonq1', 'seasonq2', 'seasonq3', 'seasonq4']; let index = index">
+    <div class="card mb-3">
+      <h2 id="title" class="card-title-quincena">
+        Quincena {{ index + 1 }}
+      </h2>
+      <div *ngIf="retosPorQuincena[quincena] && retosPorQuincena[quincena].length > 0">
+        <div *ngFor="let reto of retosPorQuincena[quincena]" class="animate__animated animate__fadeIn ae-grid__item item-lg-4 au-mb-3">
+          <div class="row g-0">
+            <div class="col-md-2 image-container">
+              <img [src]="getImageUrl(reto)" alt="Image" class="reto-img" />
+            </div>
+            <div class="col-md-10">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Reto {{ seasonNumeroDeQuincena(reto._id_retos_VV) }}: <br />
+                  {{ reto.description }}
+                </h5>
+                <p class="card-text">¿Cómo hacerlo? {{ reto.howTo }}</p>
+                <p class="card-text">
+                  ¡Valídalo para obtener verdecitos! {{ reto.verification }}
+                </p>
+                <p class="card-text">
+                  Verdecitos otorgados: {{ reto.pointsGiven }}
+                </p>
+                <!-- Simplificación para un reto -->
+                <label class="btn btn-primary">
+                  Subir Imagen
+                  <input
+                    type="file"
+                    style="display: none"
+                    (change)="uploadImageToDB($event, quincena, seasonNumeroDeQuincena(reto._id_retos_VV))"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- Card 2 -->
-  <div class="card mb-3">
-    <div class="row g-0">
-      <div class="col-md-2">
-        <img src="placeholder.png" alt="Image 2" class="img-fluid" />
-      </div>
-      <div class="col-md-10">
-        <div class="card-body">
-          <h5 class="card-title">Durante la segunda quincena...</h5>
-          <p class="card-text">
-            Body text for whatever you’d like to say. Add main takeaway
-            points, quotes, anecdotes, or even a very very short story.
-          </p>
-          <button class="btn btn-primary">Button</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="card mb-3">
-    <div class="row g-0">
-      <div class="col-md-2">
-        <img src="placeholder.png" alt="Image 3" class="img-fluid" />
-      </div>
-      <div class="col-md-10">
-        <div class="card-body">
-          <h5 class="card-title">Durante la tercera quincena...</h5>
-          <p class="card-text">
-            Body text for whatever you’d like to say. Add main takeaway
-            points, quotes, anecdotes, or even a very very short story.
-          </p>
-          <button class="btn btn-primary">Button</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Card 4 -->
-  <div class="card mb-3">
-    <div class="row g-0">
-      <div class="col-md-2">
-        <img src="placeholder.png" alt="Image 3" class="img-fluid" />
-      </div>
-      <div class="col-md-10">
-        <div class="card-body">
-          <h5 class="card-title">Durante la cuarta quincena...</h5>
-          <p class="card-text">
-            Body text for whatever you’d like to say. Add main takeaway
-            points, quotes, anecdotes, or even a very very short story.
-          </p>
-          <button class="btn btn-primary">Button</button>
-        </div>
+      <div *ngIf="!retosPorQuincena[quincena] || retosPorQuincena[quincena].length === 0">
+        <p class="text-center">No hay retos disponibles para esta quincena.</p>
       </div>
     </div>
   </div>

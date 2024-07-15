@@ -1,0 +1,85 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container-fluid {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .bg-light {
+    background-color: #eaf7f7;
+  }
+  
+  .p-3 {
+    padding: 1rem !important;
+  }
+  
+  .rounded {
+    border-radius: 0.25rem !important;
+  }
+  
+  .shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  a img {
+    cursor: pointer;
+  }
+  
+  a img:hover {
+    opacity: 0.8; /* Slightly dim the image on hover */
+  }
+  
+  .seasonal-challenge {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .upload-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .upload-image button {
+    width: 100%;
+  }
+  
+  .challenge-details h4 {
+    margin-top: 10px;
+    
+  }
+  
+  .challenge-details p {
+    margin-top: 10px;
+  }
+  
+  #title {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegúrate de que el contenedor tenga altura para centrar verticalmente */
+  }
+  
+  .reto-img {
+    width: 100%; /* Ajusta la imagen al 100% del ancho del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    max-width: 150px; /* Tamaño máximo de la imagen */
+    max-height: 150px; /* Tamaño máximo de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+    border-radius: 8px; /* Opcional: añade bordes redondeados */
+  }
+  
