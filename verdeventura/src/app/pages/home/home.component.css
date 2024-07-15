@@ -95,28 +95,8 @@ h1 {
   color: #333; /* Color del texto */
 }
 
-#fundador {
-  margin-bottom: 20px; /* Añade espacio entre los fundadores */
-}
-
-#fundador img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px; /* Bordes redondeados */
-}
-
-#fundador .col-3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#fundador .col-9 h3 {
-  margin-top: 0;
-}
-
-#fundador .col-9 p {
-  text-align: justify; /* Justifica el texto */
+#view2 p {
+  text-align: center;
 }
 
 #title {
@@ -145,3 +125,4 @@ img {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
